@@ -1,0 +1,44 @@
+&CONTROL
+    calculation = 'scf'
+    pseudo_dir = '../potentials/'
+    outdir = '../qe-output/'
+    tstress = .true.
+    tprnfor = .true.
+    disk_io = 'none'
+/ 
+&SYSTEM
+    ecutwfc = 30
+    ecutrho = 240
+    occupations = 'smearing'
+    smearing = 'mp'
+    degauss = 0.02
+    ntyp = 4
+    nat = 5
+    ibrav = 0
+/ 
+&ELECTRONS
+    diagonalization = 'david'
+    mixing_beta = 0.7
+    conv_thr = 1e-07
+/ 
+&IONS
+/ 
+&CELL
+/ 
+K_POINTS {automatic}
+ 8 8 8  0 0 0
+ATOMIC_SPECIES
+  Ba 137.327 Ba.pbe-spn-kjpaw_psl.1.0.0.UPF
+  Bi 208.9804 Bi.pbe-dn-kjpaw_psl.1.0.0.UPF
+  N 14.007 N.pbe-n-kjpaw_psl.1.0.0.UPF
+  O 15.999 O.pbe-n-kjpaw_psl.1.0.0.UPF
+CELL_PARAMETERS {angstrom}
+ 4.35 0.0 0.0
+ 0.0 4.35 0.0
+ 0.0 0.0 4.35
+ATOMIC_POSITIONS {angstrom}
+  Ba 0.00000 0.00000 0.00000
+  Bi 2.17500 2.17500 2.17500
+  O 2.17500 2.17500 0.00000
+  N 0.00000 2.17500 2.17500
+  O 2.17500 0.00000 2.17500

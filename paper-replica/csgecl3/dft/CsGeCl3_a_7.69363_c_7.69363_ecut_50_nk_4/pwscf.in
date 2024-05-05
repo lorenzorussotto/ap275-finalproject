@@ -1,0 +1,50 @@
+&CONTROL
+    calculation = 'scf'
+    pseudo_dir = '/home/bond/Software/qe-7.1/pseudo'
+    outdir = '/home/bond/Work/final-project/paper-replica/csgecl3/dft/CsGeCl3_a_7.69363_c_7.69363_ecut_50_nk_4'
+    tstress = .true.
+    tprnfor = .true.
+    disk_io = 'none'
+/ 
+&SYSTEM
+    ecutwfc = 50
+    ecutrho = 500
+    ntyp = 3
+    nat = 15
+    ibrav = 0
+/ 
+&ELECTRONS
+    diagonalization = 'david'
+    mixing_beta = 0.7
+    conv_thr = 1e-07
+/ 
+&IONS
+/ 
+&CELL
+/ 
+K_POINTS {automatic}
+ 4 4 4  1 1 1
+ATOMIC_SPECIES
+  Cl 35.45 Cl.pbe-n-kjpaw_psl.1.0.0.UPF
+  Cs 132.90545196 Cs.pbe-spn-kjpaw_psl.1.0.0.UPF
+  Ge 72.63 Ge.pbe-dn-kjpaw_psl.0.2.2.UPF
+CELL_PARAMETERS {angstrom}
+ 7.69363 0.0 0.0
+ -3.846814999999998 6.662879027318071 0.0
+ 0.0 0.0 9.5349
+ATOMIC_POSITIONS {angstrom}
+  Cs 0.00000 0.00000 9.51964
+  Cs 3.84681 2.22096 3.16304
+  Cs 0.00000 4.44192 6.34134
+  Ge 0.00000 0.00000 4.91553
+  Ge 3.84681 2.22096 8.09383
+  Ge 0.00000 4.44192 1.73723
+  Cl 0.00000 2.43448 2.99415
+  Cl 1.73849 5.44564 2.99415
+  Cl -1.73849 5.44564 2.99415
+  Cl 3.84682 4.65544 6.17245
+  Cl 1.73849 1.00372 6.17245
+  Cl 5.95514 1.00372 6.17245
+  Cl 3.84681 0.21352 9.35075
+  Cl 5.58531 3.22468 9.35075
+  Cl 2.10832 3.22468 9.35075
