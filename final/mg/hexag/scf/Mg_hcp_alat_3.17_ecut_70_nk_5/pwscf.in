@@ -1,0 +1,38 @@
+&CONTROL
+    calculation = 'relax'
+    pseudo_dir = '/home/bond/Software/qe-7.1/pseudo'
+    outdir = '/home/bond/Work/final-project/final/mg/hexag/scf/Mg_hcp_alat_3.17_ecut_70_nk_5'
+    tstress = .true.
+    tprnfor = .true.
+    disk_io = 'none'
+/ 
+&SYSTEM
+    ecutwfc = 70
+    ecutrho = 560
+    occupations = 'smearing'
+    smearing = 'mp'
+    degauss = 0.02
+    ntyp = 1
+    nat = 2
+    ibrav = 0
+/ 
+&ELECTRONS
+    diagonalization = 'david'
+    mixing_beta = 0.7
+    conv_thr = 1e-07
+/ 
+&IONS
+/ 
+&CELL
+/ 
+K_POINTS {automatic}
+ 5 5 5  0 0 0
+ATOMIC_SPECIES
+  Mg 24.305 Mg.pbe-spnl-kjpaw_psl.1.0.0.UPF
+CELL_PARAMETERS {angstrom}
+ 3.17202329 0.0 0.0
+ -1.5860116449999992 2.7470527505358935 0.0
+ 0.0 0.0 5.1412049
+ATOMIC_POSITIONS {angstrom}
+  Mg -0.00000 1.83137 1.28530
+  Mg 1.58601 0.91568 3.85590

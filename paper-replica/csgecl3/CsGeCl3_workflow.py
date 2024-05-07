@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 from labutil.plugins.pwscf import run_qe_pwscf, PWscf_inparam, parse_qe_pwscf_output
 from labutil.objects import Struc, Dir, ase2struc, Kpoints, Constraint, PseudoPotential
 from ase.spacegroup import crystal
+from ase.build import bulk
 from ase.io import write
 from ase import Atoms
 
@@ -29,6 +30,7 @@ def make_struc(alat, clat):
     symbols = ['Cs', 'Ge', 'Cl']
 
     # Create ASE Atoms object
+    #germanium = bulk('Ge', crystalstructure='diamond', a=5.657)
     perov = crystal(symbols=symbols, basis=positions, spacegroup=160, cellpar=[a, b, c, alpha, beta, gamma])
 
     #return atoms

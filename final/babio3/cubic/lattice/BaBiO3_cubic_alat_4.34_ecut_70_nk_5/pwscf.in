@@ -1,0 +1,43 @@
+&CONTROL
+    calculation = 'scf'
+    pseudo_dir = '/home/bond/Software/qe-7.1/pseudo'
+    outdir = '/home/bond/Work/final-project/final/babio3/cubic/lattice/BaBiO3_cubic_alat_4.34_ecut_70_nk_5'
+    tstress = .true.
+    tprnfor = .true.
+    disk_io = 'none'
+/ 
+&SYSTEM
+    ecutwfc = 70
+    ecutrho = 560
+    occupations = 'smearing'
+    smearing = 'mp'
+    degauss = 0.02
+    ntyp = 3
+    nat = 5
+    ibrav = 0
+/ 
+&ELECTRONS
+    diagonalization = 'david'
+    mixing_beta = 0.7
+    conv_thr = 1e-07
+/ 
+&IONS
+/ 
+&CELL
+/ 
+K_POINTS {automatic}
+ 5 5 5  0 0 0
+ATOMIC_SPECIES
+  Ba 137.327 Ba.pbe-spn-kjpaw_psl.1.0.0.UPF
+  Bi 208.9804 Bi.pbe-dn-kjpaw_psl.1.0.0.UPF
+  O 15.999 O.pbe-n-kjpaw_psl.1.0.0.UPF
+CELL_PARAMETERS {angstrom}
+ 4.34 0.0 0.0
+ 0.0 4.34 0.0
+ 0.0 0.0 4.34
+ATOMIC_POSITIONS {angstrom}
+  Ba 2.17000 2.17000 2.17000
+  Bi 0.00000 0.00000 0.00000
+  O 0.00000 0.00000 2.17000
+  O 2.17000 0.00000 0.00000
+  O 0.00000 2.17000 0.00000
